@@ -1,4 +1,5 @@
 runtime: nodejs16 # or another supported version
+service: be-vehicletaxes-login
 
 instance_class: F2
 
