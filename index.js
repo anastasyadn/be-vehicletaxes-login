@@ -7,6 +7,7 @@ const prisma = new PrismaClient();
 const app = express();
 var cors = require('cors');
 
+app.use(cors());
 app.use(bodyParser.json());
 
 // JWT secret key
@@ -30,7 +31,7 @@ function authenticateToken(req, res, next) {
   });
 }
 
-app.use(cors())
+
 
 // Login route
 app.post('/login', async (req, res) => {
