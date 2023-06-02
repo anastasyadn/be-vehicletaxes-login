@@ -7,7 +7,7 @@ const prisma = new PrismaClient();
 const app = express();
 var cors = require('cors');
 
-app.use(cors());
+app.use(cors({origin: "*"}));
 app.use(bodyParser.json());
 
 // JWT secret key
