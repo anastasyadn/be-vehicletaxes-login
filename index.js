@@ -31,8 +31,6 @@ function authenticateToken(req, res, next) {
   });
 }
 
-app.get('/', )
-
 app.use(function (req, res, next) {
 
   // Website you wish to allow to connect
