@@ -35,7 +35,6 @@ function authenticateToken(req, res, next) {
 
 // Login route
 app.post('/login', async (req, res) => {
-  res.header(`Access-Control-Allow-Origin`, `*`);
   const { email, password } = req.body;
 
   // Check if the user exists in the database
@@ -59,7 +58,6 @@ app.post('/login', async (req, res) => {
 
 // Register route
 app.post('/register', async (req, res) => {
-  res.header(`Access-Control-Allow-Origin`, `*`);
   const { email, password } = req.body;
 
   // Check if the user already exists in the database
