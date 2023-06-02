@@ -5,6 +5,7 @@ const { PrismaClient } = require('@prisma/client');
 
 const prisma = new PrismaClient();
 const app = express();
+var cors = require('cors');
 
 app.use(bodyParser.json());
 
@@ -29,7 +30,7 @@ function authenticateToken(req, res, next) {
   });
 }
 
-
+app.use(cors())
 
 // Login route
 app.post('/login', async (req, res) => {
